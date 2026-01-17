@@ -1,16 +1,16 @@
 import os
-
 import shutil
 
-src = os.path.expanduser("~/Downloads")
+source = os.path.expanduser("~/Downloads")
 
-dst = os.path.expanduser("~/Pictures")
+destination = os.path.expanduser("~/Pictures")
 
-exts = [".jpg", ".jpeg", ".png", ".gif"]
+file_types = [".jpg", ".jpeg", ".png", ".gif"]
 
-for f in os.listdir(src):
+for f in os.listdir(source):
 
-    if any(f.lower().endswith(e) for e in exts):
-        shutil.move(os.path.join(src, f), os.path.join(dst, f))
+    if any(f.lower().endswith(e) for e in file_types):
+        shutil.move(os.path.join(source, f), os.path.join(destination, f))
 
 print("doneee")
+
